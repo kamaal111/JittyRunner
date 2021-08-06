@@ -1,0 +1,726 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		60CFE0C326BD988600082A68 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60CFE0C226BD988600082A68 /* Tests_iOS.swift */; };
+		60CFE0CE26BD988600082A68 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60CFE0CD26BD988600082A68 /* Tests_macOS.swift */; };
+		60CFE0D026BD988600082A68 /* JittyRunner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 60CFE0A426BD988500082A68 /* JittyRunner.xcdatamodeld */; };
+		60CFE0D126BD988600082A68 /* JittyRunner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 60CFE0A426BD988500082A68 /* JittyRunner.xcdatamodeld */; };
+		60CFE0D226BD988600082A68 /* JittyRunnerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60CFE0A626BD988500082A68 /* JittyRunnerApp.swift */; };
+		60CFE0D326BD988600082A68 /* JittyRunnerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60CFE0A626BD988500082A68 /* JittyRunnerApp.swift */; };
+		60CFE0D426BD988600082A68 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60CFE0A726BD988500082A68 /* ContentView.swift */; };
+		60CFE0D526BD988600082A68 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60CFE0A726BD988500082A68 /* ContentView.swift */; };
+		60CFE0D626BD988600082A68 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60CFE0A826BD988500082A68 /* Persistence.swift */; };
+		60CFE0D726BD988600082A68 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60CFE0A826BD988500082A68 /* Persistence.swift */; };
+		60CFE0D826BD988600082A68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60CFE0A926BD988600082A68 /* Assets.xcassets */; };
+		60CFE0D926BD988600082A68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60CFE0A926BD988600082A68 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		60CFE0BF26BD988600082A68 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 60CFE09F26BD988500082A68 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 60CFE0AD26BD988600082A68;
+			remoteInfo = "JittyRunner (iOS)";
+		};
+		60CFE0CA26BD988600082A68 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 60CFE09F26BD988500082A68 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 60CFE0B526BD988600082A68;
+			remoteInfo = "JittyRunner (macOS)";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		60CFE0A526BD988500082A68 /* Shared.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shared.xcdatamodel; sourceTree = "<group>"; };
+		60CFE0A626BD988500082A68 /* JittyRunnerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JittyRunnerApp.swift; sourceTree = "<group>"; };
+		60CFE0A726BD988500082A68 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		60CFE0A826BD988500082A68 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		60CFE0A926BD988600082A68 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		60CFE0AE26BD988600082A68 /* JittyRunner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JittyRunner.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		60CFE0B126BD988600082A68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		60CFE0B626BD988600082A68 /* JittyRunner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JittyRunner.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		60CFE0B826BD988600082A68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		60CFE0B926BD988600082A68 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		60CFE0BE26BD988600082A68 /* Tests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		60CFE0C226BD988600082A68 /* Tests_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOS.swift; sourceTree = "<group>"; };
+		60CFE0C426BD988600082A68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		60CFE0C926BD988600082A68 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		60CFE0CD26BD988600082A68 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
+		60CFE0CF26BD988600082A68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		60CFE0AB26BD988600082A68 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		60CFE0B326BD988600082A68 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		60CFE0BB26BD988600082A68 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		60CFE0C626BD988600082A68 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		60CFE09E26BD988500082A68 = {
+			isa = PBXGroup;
+			children = (
+				60CFE0A326BD988500082A68 /* Shared */,
+				60CFE0B026BD988600082A68 /* iOS */,
+				60CFE0B726BD988600082A68 /* macOS */,
+				60CFE0C126BD988600082A68 /* Tests iOS */,
+				60CFE0CC26BD988600082A68 /* Tests macOS */,
+				60CFE0AF26BD988600082A68 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		60CFE0A326BD988500082A68 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				60CFE0A626BD988500082A68 /* JittyRunnerApp.swift */,
+				60CFE0A726BD988500082A68 /* ContentView.swift */,
+				60CFE0A826BD988500082A68 /* Persistence.swift */,
+				60CFE0A926BD988600082A68 /* Assets.xcassets */,
+				60CFE0A426BD988500082A68 /* JittyRunner.xcdatamodeld */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		60CFE0AF26BD988600082A68 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				60CFE0AE26BD988600082A68 /* JittyRunner.app */,
+				60CFE0B626BD988600082A68 /* JittyRunner.app */,
+				60CFE0BE26BD988600082A68 /* Tests iOS.xctest */,
+				60CFE0C926BD988600082A68 /* Tests macOS.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		60CFE0B026BD988600082A68 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				60CFE0B126BD988600082A68 /* Info.plist */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		60CFE0B726BD988600082A68 /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				60CFE0B826BD988600082A68 /* Info.plist */,
+				60CFE0B926BD988600082A68 /* macOS.entitlements */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+		60CFE0C126BD988600082A68 /* Tests iOS */ = {
+			isa = PBXGroup;
+			children = (
+				60CFE0C226BD988600082A68 /* Tests_iOS.swift */,
+				60CFE0C426BD988600082A68 /* Info.plist */,
+			);
+			path = "Tests iOS";
+			sourceTree = "<group>";
+		};
+		60CFE0CC26BD988600082A68 /* Tests macOS */ = {
+			isa = PBXGroup;
+			children = (
+				60CFE0CD26BD988600082A68 /* Tests_macOS.swift */,
+				60CFE0CF26BD988600082A68 /* Info.plist */,
+			);
+			path = "Tests macOS";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		60CFE0AD26BD988600082A68 /* JittyRunner (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 60CFE0DC26BD988600082A68 /* Build configuration list for PBXNativeTarget "JittyRunner (iOS)" */;
+			buildPhases = (
+				60CFE0AA26BD988600082A68 /* Sources */,
+				60CFE0AB26BD988600082A68 /* Frameworks */,
+				60CFE0AC26BD988600082A68 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "JittyRunner (iOS)";
+			productName = "JittyRunner (iOS)";
+			productReference = 60CFE0AE26BD988600082A68 /* JittyRunner.app */;
+			productType = "com.apple.product-type.application";
+		};
+		60CFE0B526BD988600082A68 /* JittyRunner (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 60CFE0DF26BD988600082A68 /* Build configuration list for PBXNativeTarget "JittyRunner (macOS)" */;
+			buildPhases = (
+				60CFE0B226BD988600082A68 /* Sources */,
+				60CFE0B326BD988600082A68 /* Frameworks */,
+				60CFE0B426BD988600082A68 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "JittyRunner (macOS)";
+			productName = "JittyRunner (macOS)";
+			productReference = 60CFE0B626BD988600082A68 /* JittyRunner.app */;
+			productType = "com.apple.product-type.application";
+		};
+		60CFE0BD26BD988600082A68 /* Tests iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 60CFE0E226BD988600082A68 /* Build configuration list for PBXNativeTarget "Tests iOS" */;
+			buildPhases = (
+				60CFE0BA26BD988600082A68 /* Sources */,
+				60CFE0BB26BD988600082A68 /* Frameworks */,
+				60CFE0BC26BD988600082A68 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				60CFE0C026BD988600082A68 /* PBXTargetDependency */,
+			);
+			name = "Tests iOS";
+			productName = "Tests iOS";
+			productReference = 60CFE0BE26BD988600082A68 /* Tests iOS.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		60CFE0C826BD988600082A68 /* Tests macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 60CFE0E526BD988600082A68 /* Build configuration list for PBXNativeTarget "Tests macOS" */;
+			buildPhases = (
+				60CFE0C526BD988600082A68 /* Sources */,
+				60CFE0C626BD988600082A68 /* Frameworks */,
+				60CFE0C726BD988600082A68 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				60CFE0CB26BD988600082A68 /* PBXTargetDependency */,
+			);
+			name = "Tests macOS";
+			productName = "Tests macOS";
+			productReference = 60CFE0C926BD988600082A68 /* Tests macOS.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		60CFE09F26BD988500082A68 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					60CFE0AD26BD988600082A68 = {
+						CreatedOnToolsVersion = 12.5;
+					};
+					60CFE0B526BD988600082A68 = {
+						CreatedOnToolsVersion = 12.5;
+					};
+					60CFE0BD26BD988600082A68 = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 60CFE0AD26BD988600082A68;
+					};
+					60CFE0C826BD988600082A68 = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 60CFE0B526BD988600082A68;
+					};
+				};
+			};
+			buildConfigurationList = 60CFE0A226BD988500082A68 /* Build configuration list for PBXProject "JittyRunner" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 60CFE09E26BD988500082A68;
+			productRefGroup = 60CFE0AF26BD988600082A68 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				60CFE0AD26BD988600082A68 /* JittyRunner (iOS) */,
+				60CFE0B526BD988600082A68 /* JittyRunner (macOS) */,
+				60CFE0BD26BD988600082A68 /* Tests iOS */,
+				60CFE0C826BD988600082A68 /* Tests macOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		60CFE0AC26BD988600082A68 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60CFE0D826BD988600082A68 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		60CFE0B426BD988600082A68 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60CFE0D926BD988600082A68 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		60CFE0BC26BD988600082A68 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		60CFE0C726BD988600082A68 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		60CFE0AA26BD988600082A68 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60CFE0D226BD988600082A68 /* JittyRunnerApp.swift in Sources */,
+				60CFE0D626BD988600082A68 /* Persistence.swift in Sources */,
+				60CFE0D026BD988600082A68 /* JittyRunner.xcdatamodeld in Sources */,
+				60CFE0D426BD988600082A68 /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		60CFE0B226BD988600082A68 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60CFE0D326BD988600082A68 /* JittyRunnerApp.swift in Sources */,
+				60CFE0D726BD988600082A68 /* Persistence.swift in Sources */,
+				60CFE0D126BD988600082A68 /* JittyRunner.xcdatamodeld in Sources */,
+				60CFE0D526BD988600082A68 /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		60CFE0BA26BD988600082A68 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60CFE0C326BD988600082A68 /* Tests_iOS.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		60CFE0C526BD988600082A68 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60CFE0CE26BD988600082A68 /* Tests_macOS.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		60CFE0C026BD988600082A68 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 60CFE0AD26BD988600082A68 /* JittyRunner (iOS) */;
+			targetProxy = 60CFE0BF26BD988600082A68 /* PBXContainerItemProxy */;
+		};
+		60CFE0CB26BD988600082A68 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 60CFE0B526BD988600082A68 /* JittyRunner (macOS) */;
+			targetProxy = 60CFE0CA26BD988600082A68 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		60CFE0DA26BD988600082A68 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		60CFE0DB26BD988600082A68 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		60CFE0DD26BD988600082A68 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DXUKH9VF73;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.kamaal.JittyRunner;
+				PRODUCT_NAME = JittyRunner;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		60CFE0DE26BD988600082A68 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DXUKH9VF73;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.kamaal.JittyRunner;
+				PRODUCT_NAME = JittyRunner;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		60CFE0E026BD988600082A68 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = DXUKH9VF73;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = macOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = io.kamaal.JittyRunner;
+				PRODUCT_NAME = JittyRunner;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		60CFE0E126BD988600082A68 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = DXUKH9VF73;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = macOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = io.kamaal.JittyRunner;
+				PRODUCT_NAME = JittyRunner;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		60CFE0E326BD988600082A68 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DXUKH9VF73;
+				INFOPLIST_FILE = "Tests iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "io.kamaal.Tests-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "JittyRunner (iOS)";
+			};
+			name = Debug;
+		};
+		60CFE0E426BD988600082A68 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DXUKH9VF73;
+				INFOPLIST_FILE = "Tests iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "io.kamaal.Tests-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "JittyRunner (iOS)";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		60CFE0E626BD988600082A68 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = DXUKH9VF73;
+				INFOPLIST_FILE = "Tests macOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				PRODUCT_BUNDLE_IDENTIFIER = "io.kamaal.Tests-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "JittyRunner (macOS)";
+			};
+			name = Debug;
+		};
+		60CFE0E726BD988600082A68 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = DXUKH9VF73;
+				INFOPLIST_FILE = "Tests macOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				PRODUCT_BUNDLE_IDENTIFIER = "io.kamaal.Tests-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "JittyRunner (macOS)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		60CFE0A226BD988500082A68 /* Build configuration list for PBXProject "JittyRunner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				60CFE0DA26BD988600082A68 /* Debug */,
+				60CFE0DB26BD988600082A68 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		60CFE0DC26BD988600082A68 /* Build configuration list for PBXNativeTarget "JittyRunner (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				60CFE0DD26BD988600082A68 /* Debug */,
+				60CFE0DE26BD988600082A68 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		60CFE0DF26BD988600082A68 /* Build configuration list for PBXNativeTarget "JittyRunner (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				60CFE0E026BD988600082A68 /* Debug */,
+				60CFE0E126BD988600082A68 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		60CFE0E226BD988600082A68 /* Build configuration list for PBXNativeTarget "Tests iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				60CFE0E326BD988600082A68 /* Debug */,
+				60CFE0E426BD988600082A68 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		60CFE0E526BD988600082A68 /* Build configuration list for PBXNativeTarget "Tests macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				60CFE0E626BD988600082A68 /* Debug */,
+				60CFE0E726BD988600082A68 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		60CFE0A426BD988500082A68 /* JittyRunner.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				60CFE0A526BD988500082A68 /* Shared.xcdatamodel */,
+			);
+			currentVersion = 60CFE0A526BD988500082A68 /* Shared.xcdatamodel */;
+			path = JittyRunner.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 60CFE09F26BD988500082A68 /* Project object */;
+}
