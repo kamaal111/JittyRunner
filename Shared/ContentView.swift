@@ -31,10 +31,12 @@ extension ContentView {
 
         func runJavaSriptCode() {
             let context = JSContext.plus
-            context?.exceptionHandler = { context, exception in
+            context?.exceptionHandler = { (_, exception: JSValue?) in
+                guard let exception = exception else { return }
                 print("JS Error: \(String(describing: exception))")
             }
-            guard let script = context?.evaluateScript(javaScriptCode) else { return }
+            let strippedCode = javaScriptCode.replaceMultipleOccurrences(of: ["“", "”"], with: "\"")
+            guard let script = context?.evaluateScript(strippedCode) else { return }
             if let result = script.toString() {
                 print(result)
             }
@@ -43,10 +45,25 @@ extension ContentView {
     }
 }
 
+extension String {
+    func replaceMultipleOccurrences(of targets: [String], with replacement: String) -> String {
+        var result = ""
+        for character in self {
+            let characterString = String(character)
+            if targets.contains(characterString) {
+                result += replacement
+            } else {
+                result += characterString
+            }
+        }
+        return result
+    }
+}
+
 extension JSContext {
     subscript(key: String) -> Any {
         get {
-            return self.objectForKeyedSubscript(key)
+            self.objectForKeyedSubscript(key)
         }
         set{
             self.setObject(newValue, forKeyedSubscript: key as NSCopying & NSObjectProtocol)
