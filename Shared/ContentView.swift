@@ -46,24 +46,21 @@ extension ContentView {
 }
 
 extension String {
-    func replaceMultipleOccurrences(of targets: [String], with replacement: String) -> String {
-        var result = ""
-        for character in self {
-            let characterString = String(character)
-            if targets.contains(characterString) {
-                result += replacement
-            } else {
-                result += characterString
+    func replaceMultipleOccurrences(of targets: [Character], with replacement: Character) -> String {
+        let characters = self.map { character -> Character in
+            if targets.contains(character) {
+                return replacement
             }
+            return character
         }
-        return result
+        return String(characters)
     }
 }
 
 extension JSContext {
     subscript(key: String) -> Any {
         get {
-            self.objectForKeyedSubscript(key)
+            self.objectForKeyedSubscript(key) as Any
         }
         set{
             self.setObject(newValue, forKeyedSubscript: key as NSCopying & NSObjectProtocol)
