@@ -1,0 +1,7 @@
+module: JittyRunner
+author: Kamaal Farah
+github_url: https://github.com/kamaal111/JittyRunner
+exclude:
+  - Tests
+copyright: "© 2021 Kamaal Farah under [open source license](https://github.com/kamaal111/JittyRunner/blob/main/LICENSE)."
+output: JazzyDocs

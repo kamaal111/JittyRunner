@@ -39,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		605280C126BECCFF00B3D4FF /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		605280C226BECD0D00B3D4FF /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		60CFE0A526BD988500082A68 /* Shared.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shared.xcdatamodel; sourceTree = "<group>"; };
 		60CFE0A626BD988500082A68 /* JittyRunnerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JittyRunnerApp.swift; sourceTree = "<group>"; };
 		60CFE0A726BD988500082A68 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -92,12 +94,14 @@
 		60CFE09E26BD988500082A68 = {
 			isa = PBXGroup;
 			children = (
-				60CFE0A326BD988500082A68 /* Shared */,
+				605280C126BECCFF00B3D4FF /* LICENSE */,
+				605280C226BECD0D00B3D4FF /* README.md */,
 				60CFE0B026BD988600082A68 /* iOS */,
 				60CFE0B726BD988600082A68 /* macOS */,
+				60CFE0AF26BD988600082A68 /* Products */,
+				60CFE0A326BD988500082A68 /* Shared */,
 				60CFE0C126BD988600082A68 /* Tests iOS */,
 				60CFE0CC26BD988600082A68 /* Tests macOS */,
-				60CFE0AF26BD988600082A68 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
