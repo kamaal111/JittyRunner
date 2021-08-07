@@ -31,7 +31,7 @@ extension ContentView {
 
         func runJavaSriptCode() {
             let context = JSContext.plus
-            context?.exceptionHandler = { [weak self] context, exception in
+            context?.exceptionHandler = { context, exception in
                 print("JS Error: \(String(describing: exception))")
             }
             guard let script = context?.evaluateScript(javaScriptCode) else { return }
