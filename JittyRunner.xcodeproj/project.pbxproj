@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2CB7EFCA26BF183500A416F8 /* ShrimpExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = 2CB7EFC926BF183500A416F8 /* ShrimpExtensions */; };
+		2CB7EFCF26BF185A00A416F8 /* ShrimpExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = 2CB7EFCE26BF185A00A416F8 /* ShrimpExtensions */; };
 		60CFE0C326BD988600082A68 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60CFE0C226BD988600082A68 /* Tests_iOS.swift */; };
 		60CFE0CE26BD988600082A68 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60CFE0CD26BD988600082A68 /* Tests_macOS.swift */; };
 		60CFE0D026BD988600082A68 /* JittyRunner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 60CFE0A426BD988500082A68 /* JittyRunner.xcdatamodeld */; };
@@ -39,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2CB7EFC526BF172D00A416F8 /* pre_compile.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = pre_compile.sh; sourceTree = "<group>"; };
 		605280C126BECCFF00B3D4FF /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		605280C226BECD0D00B3D4FF /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		60CFE0A526BD988500082A68 /* Shared.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shared.xcdatamodel; sourceTree = "<group>"; };
@@ -64,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CB7EFCA26BF183500A416F8 /* ShrimpExtensions in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CB7EFCF26BF185A00A416F8 /* ShrimpExtensions in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +96,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2CB7EFC426BF171300A416F8 /* Scripts */ = {
+			isa = PBXGroup;
+			children = (
+				2CB7EFC526BF172D00A416F8 /* pre_compile.sh */,
+			);
+			path = Scripts;
+			sourceTree = "<group>";
+		};
+		2CB7EFCD26BF185A00A416F8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		605280C326BECD3400B3D4FF /* Targets */ = {
 			isa = PBXGroup;
 			children = (
@@ -155,9 +175,11 @@
 				605280C126BECCFF00B3D4FF /* LICENSE */,
 				605280C226BECD0D00B3D4FF /* README.md */,
 				60CFE0AF26BD988600082A68 /* Products */,
+				2CB7EFC426BF171300A416F8 /* Scripts */,
 				60CFE0A326BD988500082A68 /* Shared */,
 				605280C326BECD3400B3D4FF /* Targets */,
 				605280C426BECD8C00B3D4FF /* Tests */,
+				2CB7EFCD26BF185A00A416F8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -226,6 +248,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 60CFE0DC26BD988600082A68 /* Build configuration list for PBXNativeTarget "JittyRunner (iOS)" */;
 			buildPhases = (
+				2CB7EFC626BF178000A416F8 /* Pre Compile */,
 				60CFE0AA26BD988600082A68 /* Sources */,
 				60CFE0AB26BD988600082A68 /* Frameworks */,
 				60CFE0AC26BD988600082A68 /* Resources */,
@@ -235,6 +258,9 @@
 			dependencies = (
 			);
 			name = "JittyRunner (iOS)";
+			packageProductDependencies = (
+				2CB7EFC926BF183500A416F8 /* ShrimpExtensions */,
+			);
 			productName = "JittyRunner (iOS)";
 			productReference = 60CFE0AE26BD988600082A68 /* JittyRunner.app */;
 			productType = "com.apple.product-type.application";
@@ -243,6 +269,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 60CFE0DF26BD988600082A68 /* Build configuration list for PBXNativeTarget "JittyRunner (macOS)" */;
 			buildPhases = (
+				2CB7EFC726BF17A100A416F8 /* Pre Compile */,
 				60CFE0B226BD988600082A68 /* Sources */,
 				60CFE0B326BD988600082A68 /* Frameworks */,
 				60CFE0B426BD988600082A68 /* Resources */,
@@ -252,6 +279,9 @@
 			dependencies = (
 			);
 			name = "JittyRunner (macOS)";
+			packageProductDependencies = (
+				2CB7EFCE26BF185A00A416F8 /* ShrimpExtensions */,
+			);
 			productName = "JittyRunner (macOS)";
 			productReference = 60CFE0B626BD988600082A68 /* JittyRunner.app */;
 			productType = "com.apple.product-type.application";
@@ -326,6 +356,9 @@
 				Base,
 			);
 			mainGroup = 60CFE09E26BD988500082A68;
+			packageReferences = (
+				2CB7EFC826BF183500A416F8 /* XCRemoteSwiftPackageReference "ShrimpExtensions" */,
+			);
 			productRefGroup = 60CFE0AF26BD988600082A68 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -370,6 +403,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2CB7EFC626BF178000A416F8 /* Pre Compile */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Pre Compile";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\nsh Scripts/pre_compile.sh\n";
+		};
+		2CB7EFC726BF17A100A416F8 /* Pre Compile */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Pre Compile";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\nsh Scripts/pre_compile.sh\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		60CFE0AA26BD988600082A68 /* Sources */ = {
@@ -768,6 +840,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2CB7EFC826BF183500A416F8 /* XCRemoteSwiftPackageReference "ShrimpExtensions" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kamaal111/ShrimpExtensions.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2CB7EFC926BF183500A416F8 /* ShrimpExtensions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2CB7EFC826BF183500A416F8 /* XCRemoteSwiftPackageReference "ShrimpExtensions" */;
+			productName = ShrimpExtensions;
+		};
+		2CB7EFCE26BF185A00A416F8 /* ShrimpExtensions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2CB7EFC826BF183500A416F8 /* XCRemoteSwiftPackageReference "ShrimpExtensions" */;
+			productName = ShrimpExtensions;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		60CFE0A426BD988500082A68 /* JittyRunner.xcdatamodeld */ = {
