@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import CoreData
 import JavaScriptCore
 import ShrimpExtensions
 
@@ -32,7 +31,7 @@ extension ContentView {
 
         func runJavaSriptCode() {
             guard let context = JSContext.plus else { return }
-            context.exceptionHandler = { (_, exception: JSValue?) in
+            context.exceptionHandler = { (_: JSContext?, exception: JSValue?) in
                 guard let exception = exception else { return }
                 print("JS Error: \(String(describing: exception))")
             }
