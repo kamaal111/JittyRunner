@@ -32,7 +32,6 @@ extension ContentView {
 
         func runJavaSriptCode() {
             guard let context = JSContext.plus else { return }
-            TimerJS.registerInto(jsContext: context)
             context.exceptionHandler = { (_, exception: JSValue?) in
                 guard let exception = exception else { return }
                 print("JS Error: \(String(describing: exception))")
@@ -58,12 +57,13 @@ extension JSContext {
     }
 }
 
-@objc protocol JSConsoleExports: JSExport {
+@objc
+protocol JSConsoleExports: JSExport {
     static func log(_ msg: String)
 }
 
 class JSConsole: NSObject, JSConsoleExports {
-    class func log(_ msg: String) {
+    static func log(_ msg: String) {
         print(msg)
     }
 }
@@ -78,47 +78,46 @@ extension JSContext {
         jsContext.evaluateScript("""
             Error.prototype.isError = () => {return true}
         """)
+
         jsContext["console"] = JSConsole.self
+        jsContext["timerJS"] = JSTimer.shared
+
+        jsContext.evaluateScript(JSTimer.overrideScript)
 
         return jsContext
     }
 }
 
-let timerJSSharedInstance = TimerJS()
-
 @objc
-protocol TimerJSExport: JSExport {
+protocol JSTimerExport: JSExport {
     func setTimeout(_ callback: JSValue, _ ms: Double) -> String
 
     func clearTimeout(_ identifier: String)
 
     func setInterval(_ callback: JSValue, _ ms: Double) -> String
-
 }
 
 // Custom class must inherit from `NSObject`
-@objc class TimerJS: NSObject, TimerJSExport {
-    var timers = [String: Timer]()
+@objc
+class JSTimer: NSObject, JSTimerExport {
+    override private init() { }
 
-    static func registerInto(jsContext: JSContext, forKeyedSubscript: String = "timerJS") {
-        jsContext.setObject(timerJSSharedInstance,
-                            forKeyedSubscript: forKeyedSubscript as (NSCopying & NSObjectProtocol))
-        jsContext.evaluateScript(
-            "function setTimeout(callback, ms) {" +
-            "    return timerJS.setTimeout(callback, ms)" +
-            "}" +
-            "function clearTimeout(indentifier) {" +
-            "    timerJS.clearTimeout(indentifier)" +
-            "}" +
-            "function setInterval(callback, ms) {" +
-            "    return timerJS.setInterval(callback, ms)" +
-            "}"
-        )
-    }
+    static let shared = JSTimer()
+    static let overrideScript =
+        "function setTimeout(callback, ms) {" +
+        "    return timerJS.setTimeout(callback, ms)" +
+        "}" +
+        "function clearTimeout(indentifier) {" +
+        "    timerJS.clearTimeout(indentifier)" +
+        "}" +
+        "function setInterval(callback, ms) {" +
+        "    return timerJS.setInterval(callback, ms)" +
+        "}"
+
+    private var timers = [String: Timer]()
 
     func clearTimeout(_ identifier: String) {
         let timer = timers.removeValue(forKey: identifier)
-
         timer?.invalidate()
     }
 
@@ -130,10 +129,10 @@ protocol TimerJSExport: JSExport {
         createTimer(callback: callback, ms: ms, repeats: false)
     }
 
-    func createTimer(callback: JSValue, ms: Double, repeats: Bool) -> String {
-        let timeInterval  = ms/1000.0
+    private func createTimer(callback: JSValue, ms: Double, repeats: Bool) -> String {
+        let timeInterval  = ms / 1000
 
-        let uuid = NSUUID().uuidString
+        let uuid = UUID().uuidString
 
         // make sure that we are queueing it all in the same executable queue...
         // JS calls are getting lost if the queue is not specified... that's what we believe... ;)
@@ -150,7 +149,7 @@ protocol TimerJSExport: JSExport {
     }
 
     @objc
-    func callJsCallback(timer: Timer) {
+    private func callJsCallback(timer: Timer) {
         let callback = (timer.userInfo as? JSValue)
         callback?.call(withArguments: nil)
     }
