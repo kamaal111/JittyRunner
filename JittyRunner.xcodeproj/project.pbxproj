@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C87366F26C0083100D98FE5 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C87366E26C0083100D98FE5 /* HomeScreen.swift */; };
+		2C87367026C0083100D98FE5 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C87366E26C0083100D98FE5 /* HomeScreen.swift */; };
+		2C87367526C0087600D98FE5 /* HomeScreen+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C87367426C0087600D98FE5 /* HomeScreen+ViewModel.swift */; };
+		2C87367626C0087600D98FE5 /* HomeScreen+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C87367426C0087600D98FE5 /* HomeScreen+ViewModel.swift */; };
+		2C87367826C0091D00D98FE5 /* JSContext+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C87367726C0091D00D98FE5 /* JSContext+extensions.swift */; };
+		2C87367926C0091D00D98FE5 /* JSContext+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C87367726C0091D00D98FE5 /* JSContext+extensions.swift */; };
+		2C87367D26C00A0E00D98FE5 /* JSConsole in Frameworks */ = {isa = PBXBuildFile; productRef = 2C87367C26C00A0E00D98FE5 /* JSConsole */; };
+		2C87367F26C00A1400D98FE5 /* JSConsole in Frameworks */ = {isa = PBXBuildFile; productRef = 2C87367E26C00A1400D98FE5 /* JSConsole */; };
+		2C87368326C00B3C00D98FE5 /* JSTimer in Frameworks */ = {isa = PBXBuildFile; productRef = 2C87368226C00B3C00D98FE5 /* JSTimer */; };
+		2C87368526C00B4200D98FE5 /* JSTimer in Frameworks */ = {isa = PBXBuildFile; productRef = 2C87368426C00B4200D98FE5 /* JSTimer */; };
 		2CB7EFCA26BF183500A416F8 /* ShrimpExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = 2CB7EFC926BF183500A416F8 /* ShrimpExtensions */; };
 		2CB7EFCF26BF185A00A416F8 /* ShrimpExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = 2CB7EFCE26BF185A00A416F8 /* ShrimpExtensions */; };
 		60CFE0C326BD988600082A68 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60CFE0C226BD988600082A68 /* Tests_iOS.swift */; };
@@ -41,6 +51,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2C87366E26C0083100D98FE5 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		2C87367426C0087600D98FE5 /* HomeScreen+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeScreen+ViewModel.swift"; sourceTree = "<group>"; };
+		2C87367726C0091D00D98FE5 /* JSContext+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSContext+extensions.swift"; sourceTree = "<group>"; };
+		2C87367B26C0099D00D98FE5 /* JSConsole */ = {isa = PBXFileReference; lastKnownFileType = folder; path = JSConsole; sourceTree = "<group>"; };
+		2C87368126C00AA900D98FE5 /* JSTimer */ = {isa = PBXFileReference; lastKnownFileType = folder; path = JSTimer; sourceTree = "<group>"; };
 		2CB7EFC526BF172D00A416F8 /* pre_compile.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = pre_compile.sh; sourceTree = "<group>"; };
 		605280C126BECCFF00B3D4FF /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		605280C226BECD0D00B3D4FF /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -67,7 +82,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C87368326C00B3C00D98FE5 /* JSTimer in Frameworks */,
 				2CB7EFCA26BF183500A416F8 /* ShrimpExtensions in Frameworks */,
+				2C87367F26C00A1400D98FE5 /* JSConsole in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,7 +92,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C87368526C00B4200D98FE5 /* JSTimer in Frameworks */,
 				2CB7EFCF26BF185A00A416F8 /* ShrimpExtensions in Frameworks */,
+				2C87367D26C00A0E00D98FE5 /* JSConsole in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +115,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C87366D26C0081200D98FE5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2C87367126C0083600D98FE5 /* Screens */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2C87367126C0083600D98FE5 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				2C87366E26C0083100D98FE5 /* HomeScreen.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		2C87367226C0084B00D98FE5 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				2C87367326C0085700D98FE5 /* Screens */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		2C87367326C0085700D98FE5 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				2C87367426C0087600D98FE5 /* HomeScreen+ViewModel.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		2C87367A26C0097800D98FE5 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				2C87367B26C0099D00D98FE5 /* JSConsole */,
+				2C87368126C00AA900D98FE5 /* JSTimer */,
+			);
+			path = Packages;
+			sourceTree = "<group>";
+		};
 		2CB7EFC426BF171300A416F8 /* Scripts */ = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +174,7 @@
 		2CB7EFD026BF208600A416F8 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				2C87367726C0091D00D98FE5 /* JSContext+extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -163,6 +224,7 @@
 		605280C826BECE1E00B3D4FF /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				2C87367226C0084B00D98FE5 /* ViewModels */,
 				605280C926BECE2300B3D4FF /* CoreData */,
 			);
 			path = Models;
@@ -181,12 +243,13 @@
 			children = (
 				605280C126BECCFF00B3D4FF /* LICENSE */,
 				605280C226BECD0D00B3D4FF /* README.md */,
+				2CB7EFCD26BF185A00A416F8 /* Frameworks */,
+				2C87367A26C0097800D98FE5 /* Packages */,
 				60CFE0AF26BD988600082A68 /* Products */,
 				2CB7EFC426BF171300A416F8 /* Scripts */,
 				60CFE0A326BD988500082A68 /* Shared */,
 				605280C326BECD3400B3D4FF /* Targets */,
 				605280C426BECD8C00B3D4FF /* Tests */,
-				2CB7EFCD26BF185A00A416F8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -199,6 +262,7 @@
 				605280C826BECE1E00B3D4FF /* Models */,
 				605280C626BECE0A00B3D4FF /* Resources */,
 				605280C526BECDF200B3D4FF /* Utilities */,
+				2C87366D26C0081200D98FE5 /* Views */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -268,6 +332,8 @@
 			name = "JittyRunner (iOS)";
 			packageProductDependencies = (
 				2CB7EFC926BF183500A416F8 /* ShrimpExtensions */,
+				2C87367E26C00A1400D98FE5 /* JSConsole */,
+				2C87368226C00B3C00D98FE5 /* JSTimer */,
 			);
 			productName = "JittyRunner (iOS)";
 			productReference = 60CFE0AE26BD988600082A68 /* JittyRunner.app */;
@@ -289,6 +355,8 @@
 			name = "JittyRunner (macOS)";
 			packageProductDependencies = (
 				2CB7EFCE26BF185A00A416F8 /* ShrimpExtensions */,
+				2C87367C26C00A0E00D98FE5 /* JSConsole */,
+				2C87368426C00B4200D98FE5 /* JSTimer */,
 			);
 			productName = "JittyRunner (macOS)";
 			productReference = 60CFE0B626BD988600082A68 /* JittyRunner.app */;
@@ -457,7 +525,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				60CFE0D226BD988600082A68 /* JittyRunnerApp.swift in Sources */,
+				2C87367526C0087600D98FE5 /* HomeScreen+ViewModel.swift in Sources */,
+				2C87366F26C0083100D98FE5 /* HomeScreen.swift in Sources */,
 				60CFE0D626BD988600082A68 /* Persistence.swift in Sources */,
+				2C87367826C0091D00D98FE5 /* JSContext+extensions.swift in Sources */,
 				60CFE0D026BD988600082A68 /* JittyRunner.xcdatamodeld in Sources */,
 				60CFE0D426BD988600082A68 /* ContentView.swift in Sources */,
 			);
@@ -468,7 +539,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				60CFE0D326BD988600082A68 /* JittyRunnerApp.swift in Sources */,
+				2C87367626C0087600D98FE5 /* HomeScreen+ViewModel.swift in Sources */,
+				2C87367026C0083100D98FE5 /* HomeScreen.swift in Sources */,
 				60CFE0D726BD988600082A68 /* Persistence.swift in Sources */,
+				2C87367926C0091D00D98FE5 /* JSContext+extensions.swift in Sources */,
 				60CFE0D126BD988600082A68 /* JittyRunner.xcdatamodeld in Sources */,
 				60CFE0D526BD988600082A68 /* ContentView.swift in Sources */,
 			);
@@ -861,6 +935,22 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		2C87367C26C00A0E00D98FE5 /* JSConsole */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = JSConsole;
+		};
+		2C87367E26C00A1400D98FE5 /* JSConsole */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = JSConsole;
+		};
+		2C87368226C00B3C00D98FE5 /* JSTimer */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = JSTimer;
+		};
+		2C87368426C00B4200D98FE5 /* JSTimer */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = JSTimer;
+		};
 		2CB7EFC926BF183500A416F8 /* ShrimpExtensions */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 2CB7EFC826BF183500A416F8 /* XCRemoteSwiftPackageReference "ShrimpExtensions" */;
