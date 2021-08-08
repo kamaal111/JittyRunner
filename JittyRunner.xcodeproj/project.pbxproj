@@ -111,6 +111,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		2CB7EFD026BF208600A416F8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		605280C326BECD3400B3D4FF /* Targets */ = {
 			isa = PBXGroup;
 			children = (
@@ -188,6 +195,7 @@
 			children = (
 				60CFE0A726BD988500082A68 /* ContentView.swift */,
 				60CFE0A626BD988500082A68 /* JittyRunnerApp.swift */,
+				2CB7EFD026BF208600A416F8 /* Extensions */,
 				605280C826BECE1E00B3D4FF /* Models */,
 				605280C626BECE0A00B3D4FF /* Resources */,
 				605280C526BECDF200B3D4FF /* Utilities */,
